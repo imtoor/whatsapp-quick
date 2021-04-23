@@ -18,7 +18,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <noscript>Your browser does not support Javascript</noscript>      
     </div>
   );
 }

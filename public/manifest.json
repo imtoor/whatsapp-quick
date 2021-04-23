@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Whatsapp Quick",
+  "name": "Chat whatsapp tanpa menyimpan nomor telepon",
   "icons": [
     {
       "src": "favicon.ico",
