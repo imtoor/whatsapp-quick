@@ -1,6 +1,9 @@
 import './App.css';
 import React from 'react';
 
+const country = {
+  id:62
+};
 
 const link = {
   color:'#fff',
@@ -31,7 +34,17 @@ const handleClick = () => {
   } else {
     errorText.current.style.display = 'none';
     phoneNumber.current.style.marginBottom = '10px';
-    window.open("https://wa.me/" + n,'_blank');
+    
+    let getFirstTwoNum = n.slice(0,2);
+    if(getFirstTwoNum !== '08') {
+      errorText.current.style.display = 'block';
+      errorText.current.innerHTML = 'Please start with 08xxxxxxxx';
+      phoneNumber.current.style.marginBottom = '0px';
+    } else {
+        let getRestNumber = n.slice(1);
+        window.open("https://api.whatsapp.com/send?phone=62" + getRestNumber,'_blank');
+    }
+    
   }
 }
 
